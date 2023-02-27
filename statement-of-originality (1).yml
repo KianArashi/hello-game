@@ -1,0 +1,47 @@
+# adapted from https://cs.anu.edu.au/courses/comp1720/resources/faq/#statement-of-originality
+
+# put *your* name here
+name:Raluca Brancoveanu
+
+declaration: >-
+  I declare that everything I have submitted in this assignment is entirely my
+  own work, with the following exceptions:
+
+
+# add as many "name+comment" entries as necessary
+# (or remove it altogether if you haven't collaborated with anyone)
+collaboration:
+  - name: Mihai Robert (Mihai numele de familie)
+    comment: Collecting items
+    name: Grigore Burloiu
+    comment: Collision teaking
+      
+
+# add as many "url+licence+comment" entries as necessary
+# (or remove it altogether if you haven't used any external code)
+code:
+  - comment: Game states, menu and game
+    url: https://www.youtube.com/watch?v=4Xv-Q5ATp30&t=556s
+    licence:
+code:
+  - comment: scrolling background
+    url: https://www.youtube.com/watch?v=wFJqmqzwOxo
+    licence:
+code:
+  - comment: sprite animation
+    url: https://www.youtube.com/watch?v=rtWGZ1uiBLY&t=385s
+    licence:
+code:
+  - comment: Gravity, jump
+    url: Game Development with pico-8 -by Dylan Bennet
+    licence:
+code:
+  - comment: double jump feature
+    url: http://gamedev.docrobs.co.uk/first-steps-in-pico-8-easy-collisions-with-map-tiles
+    licence:
+code:
+  - comment: 
+    url: 
+    licence:
+
+
