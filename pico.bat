@@ -1,0 +1,1 @@
+"D:\AAA\UNATC_2022-2023\2022-2023\Semestrul 1\Game dev_Grig\PICO-8\pico8.exe" -run "orange coll.p8"

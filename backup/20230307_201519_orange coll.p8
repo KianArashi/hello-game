@@ -43,7 +43,6 @@ function menu_draw()
 	map(0,56,0,0,16,16)
 	spr(3,30,40,2,2)
 	print('orange 🐱',10,70,9)
-	printh('hello there')
 	print('press z to start the mayhem',10,80,4)
 	print('press x to jump',10,89,4)
 end
@@ -250,7 +249,6 @@ function collect_vase()
 			
 			if item.type=="ball" then
 				show_gover()
-				sfx(03)
 			end 
 		end
 	end
@@ -283,7 +281,7 @@ end
 
 
 function gover_update()
-	if btn(5) then
+	if btn(4) then
 		--move to next stage
 		show_menu()
 	end
@@ -294,9 +292,9 @@ end
 function gover_draw()
 	cls()
 	map(0,56,0,0,16,16)
-	spr(72,40,10,4,4)
+	spr(3,30,40,2,2)
 	print('You failed',10,70,9)
-	print('press x to restart the mayhem',10,80,4)
+	print('press z to restart the mayhem',10,80,4)
 end
 
 function init_ball()

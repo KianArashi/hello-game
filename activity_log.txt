@@ -3,3 +3,32 @@
  r_
 2023-03-01 14:55:56 c:/Users/Raluca/AppData/Roaming/pico-8/carts/hello-game/orange coll.p8
  r
+2023-03-07 19:08:28 c:/Users/Raluca/AppData/Roaming/pico-8/carts/hello-game/orange coll.p8
+ rrrrrrrr_rrrrrrrrr_icc.........ccccc.ccccc....cc.c..c.ccccc..c...ccccc..cccc..c.
+ c.........cc.c..cccccccc.........c.....c....c.........cccccc.c
+2023-03-07 19:28:55 c:/Users/Raluca/AppData/Roaming/pico-8/carts/hello-game/orange coll.p8
+ rcgg.........g
+2023-03-07 19:39:10 c:/Users/Raluca/AppData/Roaming/pico-8/carts/hello-game/orange coll.p8
+ rrccc
+2023-03-07 19:51:17 c:/Users/Raluca/AppData/Roaming/pico-8/carts/hello-game/orange coll.p8
+ 
+2023-03-07 19:53:26 c:/Users/Raluca/AppData/Roaming/pico-8/carts/hello-game/orange coll.p8
+ iii.......
+2023-03-07 19:54:04 c:/Users/Raluca/AppData/Roaming/pico-8/carts/hello-game/orange coll.p8
+ rrrrrrrrr_rrrrrri.
+2023-03-07 19:55:19 c:/Users/Raluca/AppData/Roaming/pico-8/carts/hello-game/orange coll.p8
+ rr__cc...cicrrrrc.........cci....i.........irr_rrrr__rrrrrrc.........crrrrrr__rr
+ rcc.........c.........iii..iicc.....ccc.........cci.icc.........ccrr_rrr________
+ _rrrrrr_________rrrri.........iiii.........irrrr_rcc.........ggggggggggggggggggg
+ gggggggggggggggggggggggggg.....gg..grrr_r___rrrrr___r
+2023-03-07 20:19:53 c:/Users/Raluca/AppData/Roaming/pico-8/carts/hello-game/orange coll.p8
+ rrr_rrrrr____rrr____r___
+2023-03-07 20:21:10 c:/Users/Raluca/AppData/Roaming/pico-8/carts/hello-game/orange coll.p8
+ rr_rrr__rr_____rrrrr_
+2023-03-07 20:22:20 c:/Users/Raluca/AppData/Roaming/pico-8/carts/hello-game/orange coll.p8
+ rrrr_____rgg.......g.........g
+2023-03-07 20:24:23 c:/Users/Raluca/AppData/Roaming/pico-8/carts/hello-game/orange coll.p8
+ rrrrr_rrr___rrccccccccccccc.cc.cccc.c...c.........ccc.c.cccc........ccttssssssss
+ ssssss.....ss
+2023-03-07 20:29:33 c:/Users/Raluca/AppData/Roaming/pico-8/carts/hello-game/orange coll.p8
+ rr_________r

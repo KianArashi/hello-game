@@ -44,7 +44,8 @@ function menu_draw()
 	spr(3,30,40,2,2)
 	print('orange 🐱',10,70,9)
 	print('press z to start the mayhem',10,80,4)
-	print('press x to jump',10,89,4)end
+	print('press x to jump',10,89,4)
+end
 -->8
 --game
 
@@ -64,11 +65,14 @@ function game_update()
 	
 		map_1-=1
 		map_purrs+=0.5
-	 cat_update()
+	    cat_update()
 		if map_1<(-128*8) then
 			map_1=0
 		end
 		update_vp()
+		--if cat on knitting ball then show_gover
+		
+
 
 end
 
@@ -79,6 +83,7 @@ function game_draw()
 	map(0,50,map_1,0,128,16)
 	map(0,50,map_1+(128*8),0,128,16)
  draw_items()
+ draw_balls()
 --	print("purrs:"..player.score,2,2,7)
 -- player.score+=player.speed
  cat_draw()
@@ -176,8 +181,8 @@ function init_items()
 		 item.type="vase"
 			item.x=flr(rnd(128*8*8))
 			item.y=96 --why 96? acolo e pozitia in pixeli a podelei
-			item.b_vase=33
-			item.vase=32
+			item.b_spr=33
+			item.spr=32
 		 item.broken=false
 		add(items,item)
 	end
@@ -187,18 +192,29 @@ function init_items()
 		 item.type="mug"
 			item.x=flr(rnd(128*8*8))
 			item.y=96
-			item.vase=34
-		 item.b_vase=35
+			item.spr=34
+		 item.b_spr=35
 		 item.broken=false
 		add(items,item)
 	end
+	--ball
+	for i=1,50 do  
+		local item={}
+			item.type="ball"
+			item.x=flr(rnd(128*8*8))
+			item.y=96
+			item.spr=38
+		 item.broken=false
+		add(items,item)
+	end
+
 	
 	 	local item1={}
 			item1.type="flowers"
 			item1.x=37*8
 			item1.y=(59-50)*8
-			item1.vase=48
-			item1.b_vase=49
+			item1.spr=48
+			item1.b_spr=49
 		 item1.broken=false
 		add(items,item1)
 		
@@ -209,30 +225,34 @@ function collect_vase()
 	for item in all(items) do
 	 
 		if (item.x<=42 and item.x>=28)
-	 and cat_y+6>=item.y-8
-	 and item.broken==false
-	 then item.broken=true
+			and cat_y+6>=item.y-8
+			and item.broken==false
+			then item.broken=true
 		
-	--	elseif item.x==28 and cat_y+8==item.y 
-		--then item.broken=true
-  	
-  	if item.type=="vase" then
-  		purrs+=100
-  		sfx(01)
-  	end
-  	
-  	if item.type=="mug" then
-  		purrs+=1000
-  		sfx(02)
-  	end
-  	
-  	if item.type=="flowers" then
-  		purrs+=1666
-  		sfx(01)
-  	end
-  		
-		end	
-	end 
+			--	elseif item.x==28 and cat_y+8==item.y 
+			--then item.broken=true
+		
+			if item.type=="vase" then
+				purrs+=100
+				sfx(01)
+			end
+		
+			if item.type=="mug" then
+				purrs+=1000
+				sfx(02)
+			end
+		
+			if item.type=="flowers" then
+				purrs+=1666
+				sfx(01)
+			end
+			
+			if item.type=="ball" then
+				show_gover()
+				sfx(03)
+			end 
+		end
+	end
 end
 
 function draw_items()
@@ -240,9 +260,9 @@ function draw_items()
 	for item in all(items) do
 	
 		if item.broken then
-			spr(item.b_vase, item.x, item.y)
+			spr(item.b_spr, item.x, item.y)
 		else 
-		 spr(item.vase, item.x, item.y)
+		 spr(item.spr, item.x, item.y)
 		end
 	end
 end
@@ -262,14 +282,42 @@ end
 
 
 function gover_update()
-	
+	if btn(5) then
+		--move to next stage
+		show_menu()
+	end
 end
 
 
 
 function gover_draw()
-
+	cls()
+	map(0,56,0,0,16,16)
+	spr(72,40,10,4,4)
+	print('You failed',10,70,9)
+	print('press x to restart the mayhem',10,80,4)
 end
+
+function init_ball()
+	local balls={}
+	
+	for i=1,30 do 
+		local ball={}
+			ball.x=flr(rnd(128*8*8))
+			ball.y=96
+			ball.sprite=38
+		 ball.play=false
+		add(balls,ball)
+	end
+end
+
+function draw_balls()
+	for ball in all(balls) do
+		spr(ball.sprite, ball.x, ball,y)
+	end
+end
+
+
 __gfx__
 00000000000000000000999000099990000000000000999000000000000000000000000000000000000000000000000000000000000000000000000000000000
 00000000000000000000990000099990000000000099999000000000000999900000000000000000000000000000000000000000000000000000000000000000
