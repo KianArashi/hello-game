@@ -210,19 +210,19 @@ function init_items()
 	end
 
 	
-	 	local item1={}
-			item1.type="flowers"
-			item1.x=37*8
-			item1.y=(59-50)*8
-			item1.spr=48
-			item1.b_spr=49
-		 item1.broken=false
-		add(items,item1)
+	 	local item={}
+			item.type="flowers"
+			item.x=37*8
+			item.y=(59-50)*8
+			item.spr=48
+			item.b_spr=49
+		 item.broken=false
+		add(items,item)
 		
 			local item2={}
 			item2.type="flowers"
-			item2.x=51*8
-			item2.y=(59-50)*8
+			item2.x=64*8
+			item2.y=(60-50)*8
 			item2.spr=48
 			item2.b_spr=49
 		 item2.broken=false
@@ -235,11 +235,11 @@ function collect_vase()
 	for item in all(items) do
 	 
 		if (item.x<=42 and item.x>=28)
-			and cat_y+6>=item.y-8
+			and cat_y==item.y-8
 			
 			and item.broken==false
 			then item.broken=true
-		printh(cat_y+6)
+		printh()
 			--	elseif item.x==28 and cat_y+8==item.y 
 			--then item.broken=true
 		
