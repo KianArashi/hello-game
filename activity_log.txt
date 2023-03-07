@@ -32,3 +32,11 @@
  ssssss.....ss
 2023-03-07 20:29:33 c:/Users/Raluca/AppData/Roaming/pico-8/carts/hello-game/orange coll.p8
  rr_________r
+2023-03-07 21:01:11 c:/Users/Raluca/AppData/Roaming/pico-8/carts/hello-game/orange coll.p8
+ rrrrccccc
+2023-03-07 21:01:48 c:/Users/Raluca/AppData/Roaming/pico-8/carts/hello-game/orange coll.p8
+ rrrrrrr_r_rrrrr___r____rrrrrrr_rrr_rrcgg.........rrrrrrrrrrrr_________
+2023-03-07 21:08:05 c:/Users/Raluca/AppData/Roaming/pico-8/carts/hello-game/orange coll.p8
+ rrrrricccccccccccccrr_r____rrr_r_________
+2023-03-07 21:13:01 c:/Users/Raluca/AppData/Roaming/pico-8/carts/hello-game/orange coll.p8
+ r_

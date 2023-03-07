@@ -12,7 +12,7 @@
 [000000]     07 fullscreen_method 1 // 0 maximized window (linux)  1 borderless desktop-sized window  2 hardware fullscreen (warning: erratic behaviour under some drivers)
 [000000]     08 foreground_sleep_ms 2 // number of milliseconds to sleep each frame. Try 10 to conserve battery power
 [000000]     09 background_sleep_ms 10 // number of milliseconds to sleep each frame when running in the background
-[000000]     10 sessions 12 // number of times program has been run
+[000000]     10 sessions 16 // number of times program has been run
 [000000]     11 rmb_key 0 // 0 for none  226 for LALT
 [000000]     12 desktop_path 
 [000000]     13 read_controllers_in_background 0
@@ -47,51 +47,51 @@
 [000000]     42 gfx_grid_lines 0
 [000000]   
 [000000]   codo_system_init
-[000295]   Compiled against SDL version: 2.0.2
-[000295]   Linked against SDL version:   2.0.9
-[000295]   Current video driver: windows
-[000295]   codo_reset_timer
-[000295]   codo_gui_init
-[000295]   codo_keys_init
-[000295]   codo_text_init
-[000295]   codo_video_init
-[000295]   codo_mouse_init
-[000295]   codo_joystick_init
-[000295]   Reading controller mappings: c:/Users/Raluca/AppData/Roaming/pico-8/carts/hello-game/sdl_controllers.txt
-[000295]   searching for joysticks
-[000295]     found 0 joysticks
-[000295]   ok
-[000295] ok
-[000303] codo_load_pod: D:/AAA/UNATC_2022-2023/2022-2023/Semestrul 1/Game dev_Grig/PICO-8/pico8.dat ok 
-[000305] codo_set_screen 128 128 8 100
-[000305]  window size: 640 540
-[000371]   setting filter to nearest (screen_mode 0  back page width: 128)
+[000301]   Compiled against SDL version: 2.0.2
+[000301]   Linked against SDL version:   2.0.9
+[000301]   Current video driver: windows
+[000301]   codo_reset_timer
+[000301]   codo_gui_init
+[000301]   codo_keys_init
+[000301]   codo_text_init
+[000301]   codo_video_init
+[000301]   codo_mouse_init
+[000301]   codo_joystick_init
+[000302]   Reading controller mappings: c:/Users/Raluca/AppData/Roaming/pico-8/carts/hello-game/sdl_controllers.txt
+[000302]   searching for joysticks
+[000302]     found 0 joysticks
+[000302]   ok
+[000302] ok
+[000309] codo_load_pod: D:/AAA/UNATC_2022-2023/2022-2023/Semestrul 1/Game dev_Grig/PICO-8/pico8.dat ok 
+[000311] codo_set_screen 128 128 8 100
+[000311]  window size: 640 540
+[000380]   setting filter to nearest (screen_mode 0  back page width: 128)
   renderer direct3d:
    flags: 0x0000000E ( |  | )
    texture formats (3): ARGB8888, YV12, IYUV
    max texture size: 16384x16384
-[000373]  desktop size: 1536 864
-[000373] ok
-[000374] codo_sound_init mix_buffer_size: 1024
-[000374] codo_sound_init
-[000374] SDL_INIT_AUDIO ok
-[000392] SDL_OpenAudio ok
-[000392]  freq:22050
+[000382]  desktop size: 1536 864
+[000382] ok
+[000384] codo_sound_init mix_buffer_size: 1024
+[000384] codo_sound_init
+[000384] SDL_INIT_AUDIO ok
+[000400] SDL_OpenAudio ok
+[000400]  freq:22050
  channels:1
-[000392] Built-in audio drivers: 0 wasapi 1 directsound 2 winmm 3 disk 4 dummy
-[000392] Current audio driver: wasapi
-[000392] splore_init
-[000392] could not load favourites file: c:/Users/Raluca/AppData/Roaming/pico-8/carts/hello-game/favourites.txt
-[002068] loading c:/Users/Raluca/AppData/Roaming/pico-8/carts/hello-game/orange coll.p8
-[003743] run_cart current_filename: c:/Users/Raluca/AppData/Roaming/pico-8/carts/hello-game/orange coll.p8 running_filename: c:/Users/Raluca/AppData/Roaming/pico-8/carts/hello-game/orange coll.p8 running_cart_lid: 
-[046367] window closed (14)
-[046367] codo_exit
-[046367]   cmusic_stop
-[046367]   codo_main_exit
-[046368]   codo_config_save
-[046368]   codo_sound_exit
-[046368]   codo_video_exit
-[046376]   codo_joystick_exit
-[046376]   codo_system_exit
-[046376]   codo_items_created: 1288
-[046376] ok
+[000400] Built-in audio drivers: 0 wasapi 1 directsound 2 winmm 3 disk 4 dummy
+[000400] Current audio driver: wasapi
+[000400] splore_init
+[000401] could not load favourites file: c:/Users/Raluca/AppData/Roaming/pico-8/carts/hello-game/favourites.txt
+[002075] loading c:/Users/Raluca/AppData/Roaming/pico-8/carts/hello-game/orange coll.p8
+[004598] run_cart current_filename: c:/Users/Raluca/AppData/Roaming/pico-8/carts/hello-game/orange coll.p8 running_filename: c:/Users/Raluca/AppData/Roaming/pico-8/carts/hello-game/orange coll.p8 running_cart_lid: 
+[007849] window closed (14)
+[007849] codo_exit
+[007849]   cmusic_stop
+[007849]   codo_main_exit
+[007850]   codo_config_save
+[007850]   codo_sound_exit
+[007850]   codo_video_exit
+[007853]   codo_joystick_exit
+[007853]   codo_system_exit
+[007854]   codo_items_created: 1288
+[007854] ok

@@ -43,6 +43,7 @@ function menu_draw()
 	map(0,56,0,0,16,16)
 	spr(3,30,40,2,2)
 	print('orange 🐱',10,70,9)
+	--printh('orange')
 	print('press z to start the mayhem',10,80,4)
 	print('press x to jump',10,89,4)
 end
@@ -248,7 +249,9 @@ function collect_vase()
 			end
 			
 			if item.type=="ball" then
+				printh('sunet')
 				show_gover()
+				printh('gover')
 				sfx(03)
 			end 
 		end
