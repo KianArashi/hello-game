@@ -324,7 +324,7 @@ end
 
 function draw_balls()
 	for ball in all(balls) do
-		spr(ball.sprite, ball.x, ball,y)
+		spr(ball.sprite, ball.x, ball.y)
 	end
 end
 
