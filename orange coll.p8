@@ -219,14 +219,14 @@ function init_items()
 		 item.broken=false
 		add(items,item)
 		
-			local item2={}
-			item2.type="flowers"
-			item2.x=64*8
-			item2.y=(60-50)*8
-			item2.spr=48
-			item2.b_spr=49
-		 item2.broken=false
-		add(items,item2)
+			local item={}
+			item.type="flowers"
+			item.x=64*8
+			item.y=(60-50)*8
+			item.spr=48
+			item.b_spr=49
+		 item.broken=false
+		add(items,item)
 		
 	return items
 end
