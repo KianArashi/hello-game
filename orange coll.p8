@@ -291,6 +291,7 @@ function show_gover()--gover=game over
 end
 
 ball=76
+ball_anim_wait=0.09
 
 function gover_update()
 	if time() - cat_anim_time>cat_anim_wait then
