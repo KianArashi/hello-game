@@ -12,9 +12,9 @@ function _init()
 end
 
 function _update()
+ collect_vase()
  game.upd() -- game update
 
- collect_vase()
 end
 
 function _draw()
@@ -65,19 +65,17 @@ end
 
 
 function game_update()
-	
+
+	cat_update()
 	map_1-=1
 	map_purrs+=0.5
-	cat_update()
+	
 	if map_1<(-128*8) then
 		map_1=0
 		items=init_items()
 	end
 	update_vp()
-	--if cat on knitting ball then show_gover
-		
-
-
+	 
 end
 
 
