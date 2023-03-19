@@ -106,7 +106,7 @@ end
 --cat
 cat=3 --cat sprite
 cat_dy=0 --fall speed
-cat_rise=39 --jump sprites
+cat_rise=40 --jump sprites
 cat_x=30
 cat_y=80
 cat_anim_time=0
@@ -131,10 +131,10 @@ function cat_update()
  cat_dy+=0.5
  
 	 --jump
-	if (btnp(5)and
-	 jumps_made<jumps) then
+	if (btnp(5)and jumps_made<jumps) then
 	 jumps_made+=1
 	 cat_dy-=4
+	 
 	 sfx(00)
 	end
 	 
@@ -168,7 +168,7 @@ function cat_update()
 	else
 		landed=false
 	end
-
+--cat position that does not move down after touching the floor
 	if cat_y>=88 then
 		cat_y=88
 	end
