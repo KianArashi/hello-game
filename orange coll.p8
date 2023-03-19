@@ -8,7 +8,7 @@ transition=0
 function _init()
  --set up the variables
  show_menu()
- items=init_items()
+ items=init_items(0,128*8)
 end
 
 function _update()
@@ -53,7 +53,8 @@ end
 --game
 
 purrs=0 --score
-map_1=0 --player speed
+map_1=0
+updated_items=false --player speed
 map_purrs=0 
 
 
@@ -72,7 +73,14 @@ function game_update()
 	
 	if map_1<(-128*8) then
 		map_1=0
-		items=init_items()
+		updated_items=false
+		items=init_items(128,128*8)
+		
+	end
+	if map_1<(-128*7) and
+	 not updated_items then
+		items=init_items(0,128*7)
+		updated_items=true
 	end
 	update_vp()
 	 
@@ -173,13 +181,13 @@ end
 --items
 
 
-function init_items()
+function init_items(from, to)
 	local items={}
 	
 	for i=1,10 do 
 		local item={}
 			item.type="vase"
-			item.x=flr(rnd(128*8))
+			item.x=flr(rnd(to-from)+from)
 			item.y=96 --why 96? acolo e pozitia in pixeli a podelei
 			item.b_spr=33
 			item.spr=32
@@ -190,7 +198,7 @@ function init_items()
 	for i=1,5 do 
 		local item={}
 		 	item.type="mug"
-			item.x=flr(rnd(128*8))
+			item.x=flr(rnd(to-from)+from)
 			item.y=96
 			item.spr=34
 		 	item.b_spr=35
@@ -201,7 +209,7 @@ function init_items()
 	for i=1,7 do  
 		local item={}
 			item.type="ball"
-			item.x=flr(rnd(128*8))
+			item.x=flr(rnd(to-from)+from)
 			item.y=96
 			item.spr=38
 		 	item.broken=false
