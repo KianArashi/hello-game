@@ -73,15 +73,15 @@ function game_update()
 	
 	if map_1<(-128*8) then
 		map_1=0
-		updated_items=false
-		items=init_items(128,128*8)
+		--updated_items=false
+		--items=init_items(128,128*8)
 		
 	end
-	if map_1<(-128*7) and
-	 not updated_items then
-		items=init_items(0,128*7)
-		updated_items=true
-	end
+	--if map_1<(-128*7) and
+	 --not updated_items then
+		--items=init_items(0,128*7)
+		--updated_items=true
+	--end
 	update_vp()
 	 
 end
@@ -181,13 +181,13 @@ end
 --items
 
 
-function init_items(from, to)
+function init_items()
 	local items={}
 	
-	for i=1,10 do 
+	for i=1,100 do 
 		local item={}
 			item.type="vase"
-			item.x=flr(rnd(to-from)+from)
+			item.x=flr(rnd(128*8*10))
 			item.y=96 --why 96? acolo e pozitia in pixeli a podelei
 			item.b_spr=33
 			item.spr=32
@@ -195,10 +195,10 @@ function init_items(from, to)
 		add(items,item)
 	end
 	
-	for i=1,5 do 
+	for i=1,50 do 
 		local item={}
 		 	item.type="mug"
-			item.x=flr(rnd(to-from)+from)
+			item.x=flr(rnd(128*8*10))
 			item.y=96
 			item.spr=34
 		 	item.b_spr=35
@@ -206,10 +206,10 @@ function init_items(from, to)
 		add(items,item)
 	end
 	--ball
-	for i=1,7 do  
+	for i=1,100 do  
 		local item={}
 			item.type="ball"
-			item.x=flr(rnd(to-from)+from)
+			item.x=flr(rnd(128*8*10))
 			item.y=96
 			item.spr=38
 		 	item.broken=false
