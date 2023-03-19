@@ -13,6 +13,7 @@ end
 
 function _update()
  collect_vase()
+ cat_update()
  game.upd() -- game update
 
 end
@@ -67,7 +68,7 @@ end
 
 function game_update()
 
-	cat_update()
+	
 	map_1-=1
 	map_purrs+=0.5
 	
@@ -141,7 +142,6 @@ function cat_update()
  cat_y+=cat_dy
  
 
-
 	--collision detection
 	
 	local x1=flr((cat_x-map_1)/8)
@@ -162,19 +162,23 @@ function cat_update()
 		
 	end
  
-	if (cat_y>=80 and cat_dy>0) then
+	if (cat_y>=82 and cat_dy>0) then
 		cat_dy=0
 		landed=true
 	else
 		landed=false
 	end
- 
+
+	if cat_y>=88 then
+		cat_y=88
+	end
+
 end
 
 
 function cat_draw()
 	spr(cat,cat_x,cat_y,2,2)
-
+ printh(cat_y)
 
 end
 -->8
@@ -265,10 +269,10 @@ function collect_vase()
 				sfx(01)
 			end
 			
-			if item.type=="ball" then
+			--if item.type=="ball" then
 			
-				show_gover()
-			end 
+			--	show_gover()
+			--end 
 		end
 	end
 end
