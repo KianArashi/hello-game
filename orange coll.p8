@@ -13,7 +13,6 @@ end
 
 function _update()
  collect_vase()
- cat_update()
  game.upd() -- game update
 
 end
@@ -84,7 +83,7 @@ function game_update()
 		--updated_items=true
 	--end
 	update_vp()
-	 
+	cat_update()
 end
 
 
@@ -338,10 +337,12 @@ end
 function gover_update()
 	if time() - cat_anim_time>ball_anim_wait then
 		ball+=2
+		
 		cat_anim_time=time()
 		if ball>78 then
 			ball=76
 		end
+		
 	end
 
 	if btnp(5) then 
