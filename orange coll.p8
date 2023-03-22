@@ -353,13 +353,14 @@ function gover_update()
 end
 
 
+--how to make somethin g juicy in pico-8, de cautat
 
 function gover_draw()
 	cls()
 	spr(72,40,20,4,4)
 	spr(ball,59,40,2,2)
-	print('i think i will stay here',10,60,9)
-	print('with this masterpiece...',10,70,9)
+	print('i think i will stay here with',10,60,9)
+	print('this masterpiece...',10,70,9)
 	print('so... this is game over ',10,80,9)
 	print('press x to restart the mayhem',10,100,4)
 	print("purrs made:"..purrs+flr(map_purrs),10,110,14)
