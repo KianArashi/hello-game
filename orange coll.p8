@@ -362,7 +362,7 @@ function gover_draw()
 	print('with this masterpiece...',10,70,9)
 	print('so... this is game over ',10,80,9)
 	print('press x to restart the mayhem',10,100,4)
-	print("purrs collected:"..purrs+flr(map_purrs),10,110,14)
+	print("purrs made:"..purrs+flr(map_purrs),10,110,14)
 end
 
 function init_ball()
