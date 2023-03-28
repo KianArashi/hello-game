@@ -8,6 +8,7 @@ transition=0
 function _init()
  --set up the variables
  show_menu()
+ parts={}
  items=init_items(0,128*8)
 end
 
@@ -84,6 +85,7 @@ function game_update()
 	--end
 	update_vp()
 	cat_update()
+	--particles()
 end
 
 
@@ -93,7 +95,7 @@ function game_draw()
 	map(0,50,map_1,0,128,16)
 	map(0,50,map_1+(128*8),0,128,16)
  draw_items()
- draw_balls()
+ drw_particles()
 --	print("purrs:"..player.score,2,2,7)
 -- player.score+=player.speed
  cat_draw()
@@ -298,6 +300,28 @@ function collect_vase()
 				show_gover()
 			end 
 		end
+
+		if item.broken==true then
+			for i=1,20 do
+		add(parts,{
+			x=(cat_x+8),
+			y=(cat_y+16),
+			sx=rnd(2)-1,
+			sy=rnd(2)-1
+			})
+			end	
+		end
+		for p in all(parts) do 
+			p.x+=p.sx
+			p.y+=p.sy
+			if p.x>((cat_x+8)+20) or p.x<((cat_x+8)-20) then 
+				del(parts,p)
+			end
+			if p.y>((cat_y+16)+5) or p.y<((cat_y+16)-5) then 
+				del(parts,p)
+			end
+		end
+
 	end
 end
 
@@ -311,6 +335,8 @@ function draw_items()
 		 	spr(item.spr, item.x, item.y)
 		end
 	end
+
+	
 end
 
 
@@ -366,25 +392,40 @@ function gover_draw()
 	print("purrs made:"..purrs+flr(map_purrs),10,110,14)
 end
 
-function init_ball()
-	local balls={}
+
+
+-->8
+--particles
+--spacecat- how to make particles in pico-8! - simple particle system for explosions
+--function particles()
+	--if item.broken==true then
+		--for i=1,30 do
+	--add(parts,{
+		--x=cat_x,
+		--y=cat_y,
+		--sx=2,
+		--sy=2
+		--})
+		--end	
+	--end
+	--for p in all(parts) do 
+		--p.x+=p.sx
+		--p.y+=p.sy
+		--if p.x>100 or p.x<28 then 
+			--del(parts,p)
+		--end
+		--if p.y>100 or p.y<28 then 
+			--del(parts,p)
+		--end
+	--end
+--end
+
+function drw_particles()
 	
-	for i=1,30 do 
-		local ball={}
-			ball.x=flr(rnd(128*8*8))
-			ball.y=96
-			ball.sprite=38
-		 ball.play=false
-		add(balls,ball)
+	for p in all(parts) do 
+		circfill(p.x,p.y,1,12)
 	end
 end
-
-function draw_balls()
-	for ball in all(balls) do
-		spr(ball.sprite, ball.x, ball.y)
-	end
-end
-
 
 __gfx__
 000000000000000000000000000999900000000000009990000000000000000000000000dd5555ddd6ddddd22dddddddd55555555555555d0000000000000000
