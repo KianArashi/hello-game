@@ -334,11 +334,15 @@ function draw_items()
 		else 
 		 	spr(item.spr, item.x, item.y)
 		end
-	end
-
-	
+	end	
 end
 
+function drw_particles()
+	
+	for p in all(parts) do 
+		circfill(p.x,p.y,1,12)
+	end
+end
 
 function update_vp() -- update vase position
 	for item in all(items) do
@@ -420,12 +424,7 @@ end
 	--end
 --end
 
-function drw_particles()
-	
-	for p in all(parts) do 
-		circfill(p.x,p.y,1,12)
-	end
-end
+
 
 __gfx__
 000000000000000000000000000999900000000000009990000000000000000000000000dd5555ddd6ddddd22dddddddd55555555555555d0000000000000000
