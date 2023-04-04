@@ -98,7 +98,7 @@ function game_draw()
 -- player.score+=player.speed
  cat_draw()
 --	print("purrs:"..flr(time()),2,117,13)
- print(debug,56,117,13)
+ --print(debug,56,117,13)
 	print("purrs:"..purrs+flr(map_purrs),2,117,13)
 end
 -->8
@@ -216,7 +216,7 @@ function init_items()
 	for i=1,100 do 
 		local item={}
 			item.type="vase"
-			item.x=flr(rnd(128*8*11))
+			item.x=flr(rnd(128*8*20))
 			item.y=96 --why 96? acolo e pozitia in pixeli a podelei
 			item.b_spr=33
 			item.spr=32
@@ -227,7 +227,7 @@ function init_items()
 	for i=1,50 do 
 		local item={}
 		 	item.type="mug"
-			item.x=flr(rnd(128*8*11))
+			item.x=flr(rnd(128*8*20))
 			item.y=96
 			item.spr=34
 		 	item.b_spr=35
@@ -238,7 +238,7 @@ function init_items()
 	for i=1,100 do  
 		local item={}
 			item.type="ball"
-			item.x=flr(rnd(128*8*11))
+			item.x=flr(rnd(128*8*20))
 			item.y=96
 			item.spr=38
 		 	item.broken=false
