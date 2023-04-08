@@ -8,7 +8,6 @@ transition=0
 function _init()
  --set up the variables
  show_menu()
- parts={}
  items=init_items(0,128*8)
 end
 
@@ -100,7 +99,7 @@ function game_draw()
 -- player.score+=player.speed
  cat_draw()
 --	print("purrs:"..flr(time()),2,117,13)
- print(debug,56,117,13)
+ --print(debug,56,117,13)
 	print("purrs:"..purrs+flr(map_purrs),2,117,13)
 end
 -->8
@@ -205,7 +204,7 @@ end
 function cat_draw()
 	
 	spr(cat,cat_x,cat_y,2,2)
- printh(cat_y)
+
 
 end
 -->8
@@ -218,32 +217,35 @@ function init_items()
 	for i=1,100 do 
 		local item={}
 			item.type="vase"
-			item.x=flr(rnd(128*8*11))
+			item.x=flr(rnd(128*8*20))
 			item.y=96 --why 96? acolo e pozitia in pixeli a podelei
 			item.b_spr=33
 			item.spr=32
 		 	item.broken=false
+			item.parts={}
 		add(items,item)
 	end
 	
 	for i=1,50 do 
 		local item={}
 		 	item.type="mug"
-			item.x=flr(rnd(128*8*11))
+			item.x=flr(rnd(128*8*20))
 			item.y=96
 			item.spr=34
 		 	item.b_spr=35
 			item.broken=false
+			item.parts={}
 		add(items,item)
 	end
 	--ball
 	for i=1,100 do  
 		local item={}
 			item.type="ball"
-			item.x=flr(rnd(128*8*11))
+			item.x=flr(rnd(128*8*20))
 			item.y=96
 			item.spr=38
 		 	item.broken=false
+			item.parts={}
 		add(items,item)
 	end
 
@@ -255,6 +257,7 @@ function init_items()
 			item.spr=48
 			item.b_spr=49
 		 	item.broken=false
+			item.parts={}
 		add(items,item)
 		
 			local item={}
@@ -264,6 +267,7 @@ function init_items()
 			item.spr=48
 			item.b_spr=49
 		 	item.broken=false
+			item.parts={}
 		add(items,item)
 		
 	return items
@@ -276,7 +280,8 @@ function collect_vase()
 			and cat_y==item.y-8
 			
 			and item.broken==false
-			then item.broken=true
+			then
+			item.broken=true
 		
 			--	elseif item.x==28 and cat_y+8==item.y 
 			--then item.broken=true
@@ -302,23 +307,34 @@ function collect_vase()
 		end
 
 		if item.broken==true then
-			for i=1,20 do
-		add(parts,{
-			x=(cat_x+8),
-			y=(cat_y+16),
+			for i=1,2 do
+		add(item.parts,{
+			x=(item.x),
+			y=(item.y+10),
 			sx=rnd(2)-1,
 			sy=rnd(2)-1
 			})
 			end	
+		
 		end
-		for p in all(parts) do 
-			p.x+=p.sx
+
+		for p in all(item.parts) do 
+			p.x+=p.sx-1
 			p.y+=p.sy
-			if p.x>((cat_x+8)+20) or p.x<((cat_x+8)-20) then 
-				del(parts,p)
+			prnd_x=rnd(10)
+			
+			if p.y>(item.y+7) then
+				p.y=(item.y+7)
 			end
-			if p.y>((cat_y+16)+5) or p.y<((cat_y+16)-5) then 
-				del(parts,p)
+			if p.x>((item.x)+20+prnd_x) or p.x<((item.x)-40-prnd_x) then 
+				del(item.parts,p)
+			end
+			if p.y>((item.y)+17) or p.y<((item.y)) then 
+				del(item.parts,p)
+			end
+
+			if p.x>((cat_x+8)+20) or p.x<((cat_x+8)-20) then 
+				del(item.parts,p)
 			end
 		end
 
@@ -338,10 +354,12 @@ function draw_items()
 end
 
 function drw_particles()
-	
-	for p in all(parts) do 
-		circfill(p.x,p.y,1,12)
+	for item in all(items) do
+		for p in all(item.parts) do 
+			circfill(p.x,p.y,1,12)
+		end
 	end
+	
 end
 
 function update_vp() -- update vase position
