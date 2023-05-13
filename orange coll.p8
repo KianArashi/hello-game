@@ -47,7 +47,7 @@ function menu_draw()
 	print('orange 🐱',10,70,9)
 	--printh('orange')
 	print('press z to start the mayhem',10,80,4)
-	print('press x to jump',10,89,4)
+	print('press ⬆️ to jump',10,89,4)
 end
 -->8
 --game
@@ -150,7 +150,7 @@ function cat_update()
 		
 	end
  	 --jump
-	if (btnp(5)and jumps_made<jumps) then
+	if (btnp(2)and jumps_made<jumps) then
 		jumps_made+=1
 		cat_dy-=4
 		
